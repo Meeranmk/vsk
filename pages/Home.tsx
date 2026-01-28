@@ -23,8 +23,8 @@ const Hero = () => (
       <div className="absolute inset-0 bg-gradient-to-r from-blue-900/90 to-black/60"></div>
     </div>
 
-    <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-20">
-      <div className="max-w-3xl">
+    <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-20 text-center md:text-left">
+      <div className="max-w-3xl mx-auto md:mx-0">
         <h1 className="text-4xl md:text-6xl lg:text-7xl font-extrabold text-white mb-6 leading-tight">
           Precision <span className="text-orange-500">Demolition</span>. <br />
           Quality <span className="text-blue-400">Materials</span>.
@@ -69,8 +69,8 @@ const Features = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {features.map((f, i) => (
-            <div key={i} className="p-8 rounded-2xl bg-gray-50 hover:bg-white hover:shadow-xl transition-all duration-300 border border-transparent hover:border-blue-100 group">
-              <div className="text-blue-900 mb-6 group-hover:scale-110 transition-transform origin-left">{f.icon}</div>
+            <div key={i} className="p-8 rounded-2xl bg-gray-50 hover:bg-white hover:shadow-xl transition-all duration-300 border border-transparent hover:border-blue-100 group text-center md:text-left">
+              <div className="text-blue-900 mb-6 group-hover:scale-110 transition-transform origin-center md:origin-left inline-block">{f.icon}</div>
               <h3 className="text-xl font-bold text-slate-900 mb-3">{f.title}</h3>
               <p className="text-slate-600 leading-relaxed">{f.desc}</p>
             </div>

@@ -20,7 +20,7 @@ export const SERVICES: Service[] = [
       'Safe Debris Management',
       'High-Rise Demolition Experts'
     ],
-    imageUrl: '/demolition-1.jpg'
+    imageUrl: '/demolition-service.png'
   },
   {
     id: 'roofing',
@@ -33,7 +33,7 @@ export const SERVICES: Service[] = [
       'Commercial Shed Construction',
       'Routine Maintenance Packages'
     ],
-    imageUrl: 'https://images.unsplash.com/photo-1635424710928-0544e8512eae?auto=format&fit=crop&q=80&w=800'
+    imageUrl: '/shed-work.png'
   }
 ];
 
@@ -41,8 +41,10 @@ export const PRODUCT_CATEGORIES = [
   'Metal Sheets',
   'Cement Sheets',
   'MS Pipes',
+  'MS Square Tubes',
   'GP Pipes',
   'Polycarbonate Sheets',
+  'Puff Sheets',
   'Iron Gates'
 ];
 
@@ -86,6 +88,16 @@ export const PRODUCTS: Product[] = [
     availabilityDate: 'In Stock'
   },
   {
+    id: '3b',
+    name: 'MS Square Tubes',
+    category: 'MS Square Tubes',
+    description: 'High-strength Mild Steel square hollow sections for fabrication, frames, and structural supports.',
+    specs: ['Shape: Square Box', 'Sizes: 19mm to 100mm', 'Thickness: 1.2mm - 4mm'],
+    imageUrl: '/ms-square-tubes.png',
+    availabilityDate: 'In Stock',
+    isNew: true
+  },
+  {
     id: '4',
     name: 'Galvanized GP Pipes (Stack)',
     category: 'GP Pipes',
@@ -103,6 +115,16 @@ export const PRODUCTS: Product[] = [
     specs: ['UV Protected', 'Transparency: 85%+', 'Colors: Clear'],
     imageUrl: '/polycarbonate.png',
     availabilityDate: 'In Stock'
+  },
+  {
+    id: '8',
+    name: 'PUF Insulated Sheets',
+    category: 'Puff Sheets',
+    description: 'High-efficiency Polyurethane Foam (PUF) sandwich sheets for superior thermal insulation in industrial roofing and cold storage.',
+    specs: ['Insulation: High Density PUF', 'Thickness: 50mm - 100mm', 'Heat Resistance: Excellent'],
+    imageUrl: '/puff-sheets.png',
+    availabilityDate: 'In Stock',
+    isNew: true
   },
   {
     id: '6',

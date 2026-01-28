@@ -5,8 +5,8 @@ import { PRODUCTS, PRODUCT_CATEGORIES, COMPANY_DETAILS } from '../constants';
 const Products: React.FC = () => {
   const [selectedCategory, setSelectedCategory] = useState<string>('All');
 
-  const filteredProducts = selectedCategory === 'All' 
-    ? PRODUCTS 
+  const filteredProducts = selectedCategory === 'All'
+    ? PRODUCTS
     : PRODUCTS.filter(p => p.category === selectedCategory);
 
   return (
@@ -23,11 +23,10 @@ const Products: React.FC = () => {
         <div className="flex flex-wrap justify-center gap-4 mb-16">
           <button
             onClick={() => setSelectedCategory('All')}
-            className={`px-6 py-3 rounded-full font-bold text-sm transition-all ${
-              selectedCategory === 'All' 
-                ? 'bg-blue-900 text-white shadow-lg' 
+            className={`px-6 py-3 rounded-full font-bold text-sm transition-all ${selectedCategory === 'All'
+                ? 'bg-blue-900 text-white shadow-lg'
                 : 'bg-white text-slate-600 hover:bg-gray-100'
-            }`}
+              }`}
           >
             All Products
           </button>
@@ -35,11 +34,10 @@ const Products: React.FC = () => {
             <button
               key={cat}
               onClick={() => setSelectedCategory(cat)}
-              className={`px-6 py-3 rounded-full font-bold text-sm transition-all ${
-                selectedCategory === cat 
-                  ? 'bg-blue-900 text-white shadow-lg' 
+              className={`px-6 py-3 rounded-full font-bold text-sm transition-all ${selectedCategory === cat
+                  ? 'bg-blue-900 text-white shadow-lg'
                   : 'bg-white text-slate-600 hover:bg-gray-100'
-              }`}
+                }`}
             >
               {cat}
             </button>
@@ -53,11 +51,7 @@ const Products: React.FC = () => {
               <div className="h-72 relative overflow-hidden">
                 <img src={p.imageUrl} alt={p.name} className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" />
                 <div className="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity"></div>
-                {p.isNew && (
-                  <div className="absolute top-4 left-4 bg-orange-600 text-white text-[10px] font-black px-4 py-1.5 rounded-full uppercase tracking-widest shadow-lg">
-                    New Design
-                  </div>
-                )}
+
                 {p.availabilityDate && (
                   <div className="absolute bottom-4 right-4 bg-white/90 backdrop-blur-md text-blue-900 text-[10px] font-bold px-3 py-1.5 rounded-lg shadow-sm border border-white/20">
                     Avail: {p.availabilityDate}
@@ -68,7 +62,7 @@ const Products: React.FC = () => {
                 <span className="text-[10px] font-black text-blue-600 uppercase tracking-widest mb-2 block">{p.category}</span>
                 <h3 className="text-2xl font-bold text-slate-900 mb-4">{p.name}</h3>
                 <p className="text-slate-500 mb-8 line-clamp-3 text-sm leading-relaxed">{p.description}</p>
-                
+
                 <div className="space-y-3 mb-8">
                   <h4 className="text-xs font-bold text-slate-400 uppercase tracking-wider mb-2">Specifications</h4>
                   {p.specs.map((spec, i) => (
@@ -80,7 +74,7 @@ const Products: React.FC = () => {
                 </div>
               </div>
               <div className="p-8 pt-0 mt-auto">
-                <a 
+                <a
                   href={`https://wa.me/${COMPANY_DETAILS.whatsapp.replace('+', '')}?text=Hello VSK Traders, I am interested in the ${p.name} from your catalog.`}
                   className="block w-full text-center bg-blue-900 text-white py-4 rounded-xl font-bold hover:bg-blue-800 transition-all shadow-md hover:shadow-xl active:scale-95"
                 >

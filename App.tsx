@@ -25,7 +25,7 @@ const About = () => (
     {/* Founder Section */}
     <div className="bg-gradient-to-br from-slate-900 to-slate-800 rounded-[3rem] p-12 mb-16 shadow-2xl">
       <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-        <div className="order-2 md:order-1 space-y-6">
+        <div className="order-2 md:order-1 space-y-6 text-center md:text-left">
           <div className="inline-block bg-orange-600 text-white px-6 py-2 rounded-full text-sm font-bold uppercase tracking-wider mb-4">
             Our Founder
           </div>
@@ -39,7 +39,7 @@ const About = () => (
             With over three decades of industry experience, his leadership has transformed VSK Traders into one of
             Chennai's most trusted names in building demolition and premium construction materials.
           </p>
-          <div className="flex items-center space-x-4 pt-4">
+          <div className="flex items-center justify-center md:justify-start space-x-4 pt-4">
             <div className="h-1 w-20 bg-gradient-to-r from-orange-600 to-yellow-500 rounded-full"></div>
             <span className="text-orange-400 font-bold text-sm uppercase tracking-wider">Since 1996</span>
           </div>
@@ -58,7 +58,7 @@ const About = () => (
 
     {/* Company Story */}
     <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center mb-16">
-      <div className="space-y-6 text-lg text-slate-600 leading-relaxed">
+      <div className="space-y-6 text-lg text-slate-600 leading-relaxed text-center md:text-left">
         <h3 className="text-3xl font-bold text-slate-900 mb-6">Our Story</h3>
         <p>Founded on the principles of trust and safety, VSK Traders has grown from a local supplier to one of Chennai's premier names in demolition and construction materials.</p>
         <p>We believe that every structure has a story, and every new build deserves the best foundation. Our team of experts brings decades of combined experience to every demolition site, ensuring that projects are completed on time, within budget, and with zero accidents.</p>
@@ -66,6 +66,85 @@ const About = () => (
       </div>
       <div className="rounded-[3rem] overflow-hidden shadow-2xl h-96">
         <img src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&q=80&w=1000" alt="Team Work" className="w-full h-full object-cover" />
+      </div>
+    </div>
+
+    {/* Services Expertise */}
+    <div className="bg-gradient-to-br from-blue-50 to-orange-50 rounded-[3rem] p-12 mb-16">
+      <h3 className="text-3xl font-bold text-slate-900 mb-8 text-center">Our Core Expertise</h3>
+
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
+        {/* Shed Work Services */}
+        <div className="bg-white rounded-2xl overflow-hidden shadow-lg">
+          <div className="h-48 overflow-hidden">
+            <img
+              src="/shed-work.png"
+              alt="Industrial Shed Construction"
+              className="w-full h-full object-cover"
+            />
+          </div>
+          <div className="p-8">
+            <h4 className="text-2xl font-bold text-slate-900 mb-4">All Types of Shed Work</h4>
+            <p className="text-slate-600 mb-4 leading-relaxed">
+              We specialize in comprehensive shed construction and roofing solutions for all industrial and commercial needs:
+            </p>
+            <ul className="space-y-3">
+              {[
+                'Industrial Shed Construction',
+                'Warehouse Shed Fabrication',
+                'Factory Roofing Solutions',
+                'Commercial Shed Erection',
+                'Pre-Engineered Building (PEB) Structures',
+                'Metal Roofing Installation',
+                'Shed Repair & Maintenance',
+                'Custom Shed Design & Build'
+              ].map((item, i) => (
+                <li key={i} className="flex items-start">
+                  <span className="w-2 h-2 bg-orange-600 rounded-full mr-3 mt-2 flex-shrink-0"></span>
+                  <span className="text-slate-700 font-medium">{item}</span>
+                </li>
+              ))}
+            </ul>
+          </div>
+        </div>
+
+        {/* Building Demolition Services */}
+        <div className="bg-white rounded-2xl overflow-hidden shadow-lg">
+          <div className="h-48 overflow-hidden">
+            <img
+              src="/demolition-service.png"
+              alt="Building Demolition Services"
+              className="w-full h-full object-cover"
+            />
+          </div>
+          <div className="p-8">
+            <h4 className="text-2xl font-bold text-slate-900 mb-4">Building Demolition</h4>
+            <p className="text-slate-600 mb-4 leading-relaxed">
+              Expert demolition services with a focus on safety, precision, and environmental responsibility:
+            </p>
+            <ul className="space-y-3">
+              {[
+                'Residential Building Demolition',
+                'Commercial Structure Demolition',
+                'Industrial Complex Dismantling',
+                'High-Rise Building Demolition',
+                'Controlled Demolition Services',
+                'Structural Demolition & Excavation',
+                'Site Clearing & Debris Removal',
+                'Salvage Material Recovery',
+                'Concrete Breaking & Removal',
+                'Asbestos Removal & Disposal',
+                'Interior Strip-Out Services',
+                'Foundation Demolition'
+              ].map((item, i) => (
+                <li key={i} className="flex items-start">
+                  <span className="w-2 h-2 bg-blue-900 rounded-full mr-3 mt-2 flex-shrink-0"></span>
+                  <span className="text-slate-700 font-medium">{item}</span>
+                </li>
+              ))}
+            </ul>
+          </div>
+        </div>
       </div>
     </div>
   </div>
@@ -76,7 +155,7 @@ const Services = () => (
     <h1 className="text-5xl font-extrabold mb-12 text-center">Our Specialized Services</h1>
     <div className="grid grid-cols-1 md:grid-cols-2 gap-16">
       <div id="demolition" className="space-y-6">
-        <img src="/demolition-service.png" className="rounded-3xl h-80 w-full object-cover shadow-lg" alt="Demolition" />
+        <img src="/demolition-service-pro.png" className="rounded-3xl h-80 w-full object-cover shadow-lg" alt="Demolition" />
         <h2 className="text-3xl font-bold text-blue-900">Building Demolition</h2>
         <p className="text-slate-600 leading-relaxed text-lg">We provide end-to-end demolition solutions. From securing government permissions to safe execution and debris recycling, we handle it all.</p>
         <ul className="grid grid-cols-1 sm:grid-cols-2 gap-4">
@@ -88,7 +167,7 @@ const Services = () => (
         </ul>
       </div>
       <div id="roofing" className="space-y-6">
-        <img src="https://images.unsplash.com/photo-1635424710928-0544e8512eae?auto=format&fit=crop&q=80&w=800" className="rounded-3xl h-80 w-full object-cover shadow-lg" alt="Roofing" />
+        <img src="/roofing-service-pro.png" className="rounded-3xl h-80 w-full object-cover shadow-lg" alt="Roofing" />
         <h2 className="text-3xl font-bold text-orange-600">Roofing Services</h2>
         <p className="text-slate-600 leading-relaxed text-lg">Protection starts from the top. We specialize in industrial roofing, warehouse sheds, and domestic roofing repairs using premium materials.</p>
         <ul className="grid grid-cols-1 sm:grid-cols-2 gap-4">
