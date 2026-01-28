@@ -1,0 +1,7 @@
+{
+  "name": "VSK Traders - Demolition & Construction Materials",
+  "description": "Professional demolition services and construction materials supply website for VSK Traders, Chennai. Features a product catalog, service listings, and project gallery.",
+  "requestFramePermissions": [
+    "geolocation"
+  ]
+}
