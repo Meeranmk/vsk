@@ -45,6 +45,11 @@ export const PRODUCT_CATEGORIES = [
   'GP Pipes',
   'Polycarbonate Sheets',
   'Puff Sheets',
+  'UPVC Roofing Sheets',
+  'UPVC Gutters',
+  'Metal Angles',
+  'PA Channels',
+  'Steel Racks',
   'Iron Gates'
 ];
 
@@ -123,6 +128,56 @@ export const PRODUCTS: Product[] = [
     description: 'High-efficiency Polyurethane Foam (PUF) sandwich sheets for superior thermal insulation in industrial roofing and cold storage.',
     specs: ['Insulation: High Density PUF', 'Thickness: 50mm - 100mm', 'Heat Resistance: Excellent'],
     imageUrl: '/puff-sheets.png',
+    availabilityDate: 'In Stock',
+    isNew: true
+  },
+  {
+    id: '9',
+    name: 'UPVC Roofing Sheets',
+    category: 'UPVC Roofing Sheets',
+    description: 'Multi-layer UPVC roofing sheets that offer excellent heat insulation, soundproofing, and chemical resistance.',
+    specs: ['Material: UPVC', 'Layers: 3-Layer Tech', 'Colors: White/Blue/Terracotta'],
+    imageUrl: '/upvc-roofing.png',
+    availabilityDate: 'In Stock',
+    isNew: true
+  },
+  {
+    id: '10',
+    name: 'UPVC Rainwater Gutters',
+    category: 'UPVC Gutters',
+    description: 'Durable and leak-proof UPVC rainwater gutter systems with easy installation fittings for efficient roof drainage.',
+    specs: ['Shape: Half-Round/Square', 'Fittings: Complete Kit', 'Warranty: 10 Years'],
+    imageUrl: '/upvc-gutter.png',
+    availabilityDate: 'In Stock',
+    isNew: true
+  },
+  {
+    id: '11',
+    name: 'MS Metal Angles (L-Angle)',
+    category: 'Metal Angles',
+    description: 'Hot-rolled Mild Steel L-shaped angles for structural framing, brackets, and general fabrication.',
+    specs: ['Sizes: 25x25mm to 100x100mm', 'Thickness: 3mm - 10mm', 'Grade: IS 2062'],
+    imageUrl: '/metal-angles.png',
+    availabilityDate: 'In Stock',
+    isNew: true
+  },
+  {
+    id: '12',
+    name: 'PA Channels (C-Purlins)',
+    category: 'PA Channels',
+    description: 'Structural steel C-channels/purlins (PA Channels) for industrial shed supports and heavy-duty frameworks.',
+    specs: ['Profile: C-Section', 'Size: 75x40mm to 200x75mm', 'Finish: Primer Coated'],
+    imageUrl: '/steel-channels.png',
+    availabilityDate: 'In Stock',
+    isNew: true
+  },
+  {
+    id: '13',
+    name: 'Steel Racks',
+    category: 'Steel Racks',
+    description: 'Heavy-duty slotted angle steel racks for warehouse storage, industrial shelving, and retail display.',
+    specs: ['Type: Slotted Angle', 'Load: 100kg-500kg/shelf', 'Finish: Powder Coated Grey'],
+    imageUrl: '/steel-racks.png',
     availabilityDate: 'In Stock',
     isNew: true
   },

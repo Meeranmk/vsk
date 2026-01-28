@@ -1,11 +1,13 @@
 
-import React from 'react';
+import React, { useRef, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import {
   WrenchScrewdriverIcon,
   CheckBadgeIcon,
   TruckIcon,
-  CurrencyDollarIcon
+  CurrencyDollarIcon,
+  ChevronLeftIcon,
+  ChevronRightIcon
 } from '@heroicons/react/24/solid';
 import { SERVICES, PRODUCTS, TESTIMONIALS } from '../constants';
 
@@ -82,6 +84,35 @@ const Features = () => {
 };
 
 const Home: React.FC = () => {
+  const scrollRef = useRef<HTMLDivElement>(null);
+
+  const scroll = (direction: 'left' | 'right') => {
+    if (scrollRef.current) {
+      const scrollAmount = 400;
+      scrollRef.current.scrollBy({
+        left: direction === 'left' ? -scrollAmount : scrollAmount,
+        behavior: 'smooth'
+      });
+    }
+  };
+
+  // Auto-scroll effect
+  useEffect(() => {
+    const interval = setInterval(() => {
+      if (scrollRef.current) {
+        const { scrollLeft, scrollWidth, clientWidth } = scrollRef.current;
+        // Check if we are near the end
+        if (scrollLeft + clientWidth >= scrollWidth - 10) {
+          scrollRef.current.scrollTo({ left: 0, behavior: 'smooth' });
+        } else {
+          scroll('right');
+        }
+      }
+    }, 3000); // Scroll every 3 seconds
+
+    return () => clearInterval(interval);
+  }, []);
+
   return (
     <div className="pt-0">
       <Hero />
@@ -179,7 +210,7 @@ const Home: React.FC = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-col md:flex-row justify-between items-end mb-16 space-y-4 md:space-y-0">
             <div>
-              <h2 className="text-3xl md:text-5xl font-bold text-slate-900 mb-4">Construction Materials</h2>
+              <h2 className="text-3xl md:text-5xl font-bold text-slate-900 mb-4">Roofing Materials</h2>
               <p className="text-slate-500 text-lg">Top-grade industrial supplies for durable projects.</p>
             </div>
             <Link to="/products" className="bg-blue-900 text-white px-8 py-3 rounded-full font-bold hover:bg-blue-800 transition-all">
@@ -187,22 +218,48 @@ const Home: React.FC = () => {
             </Link>
           </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-            {PRODUCTS.slice(0, 3).map((p) => (
-              <div key={p.id} className="bg-gray-50 rounded-2xl p-4 group border border-transparent hover:border-blue-100 hover:bg-white transition-all shadow-sm hover:shadow-xl">
-                <div className="h-64 rounded-xl overflow-hidden mb-6 relative">
-                  <img src={p.imageUrl} alt={p.name} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
-                  <div className="absolute top-4 left-4 bg-orange-600 text-white text-[10px] font-bold px-3 py-1 rounded-full uppercase tracking-widest">
-                    {p.category}
+          <div className="relative group">
+            {/* Scroll Buttons */}
+            <button
+              onClick={() => scroll('left')}
+              className="absolute left-0 top-1/2 -translate-y-1/2 -ml-4 z-10 bg-white p-3 rounded-full shadow-lg text-blue-900 opacity-0 group-hover:opacity-100 transition-all duration-300 hover:scale-110 hidden md:block"
+            >
+              <ChevronLeftIcon className="h-6 w-6" />
+            </button>
+            <button
+              onClick={() => scroll('right')}
+              className="absolute right-0 top-1/2 -translate-y-1/2 -mr-4 z-10 bg-white p-3 rounded-full shadow-lg text-blue-900 opacity-0 group-hover:opacity-100 transition-all duration-300 hover:scale-110 hidden md:block"
+            >
+              <ChevronRightIcon className="h-6 w-6" />
+            </button>
+
+            {/* Carousel Container */}
+            <div
+              ref={scrollRef}
+              className="flex overflow-x-auto gap-8 pb-8 snap-x snap-mandatory hide-scrollbar"
+              style={{ msOverflowStyle: 'none', scrollbarWidth: 'none' }}
+            >
+              {PRODUCTS.map((p) => (
+                <div key={p.id} className="min-w-[300px] md:min-w-[400px] snap-center bg-gray-50 rounded-2xl p-4 group/card border border-transparent hover:border-blue-100 hover:bg-white transition-all shadow-sm hover:shadow-xl">
+                  <div className="h-64 rounded-xl overflow-hidden mb-6 relative">
+                    <img src={p.imageUrl} alt={p.name} className="w-full h-full object-cover group-hover/card:scale-105 transition-transform duration-500" />
+                    <div className="absolute top-4 left-4 bg-orange-600 text-white text-[10px] font-bold px-3 py-1 rounded-full uppercase tracking-widest">
+                      {p.category}
+                    </div>
                   </div>
+                  <h3 className="text-xl font-bold text-slate-900 mb-2">{p.name}</h3>
+                  <p className="text-sm text-slate-500 mb-6 line-clamp-2">{p.description}</p>
+                  <Link to="/products" className="block text-center border-2 border-slate-200 py-3 rounded-xl font-bold text-slate-700 hover:border-blue-900 hover:text-blue-900 transition-all">
+                    Request Specs
+                  </Link>
                 </div>
-                <h3 className="text-xl font-bold text-slate-900 mb-2">{p.name}</h3>
-                <p className="text-sm text-slate-500 mb-6 line-clamp-2">{p.description}</p>
-                <Link to="/products" className="block text-center border-2 border-slate-200 py-3 rounded-xl font-bold text-slate-700 hover:border-blue-900 hover:text-blue-900 transition-all">
-                  Request Specs
-                </Link>
-              </div>
-            ))}
+              ))}
+            </div>
+
+            {/* Mobile Swipe Hint */}
+            <div className="flex justify-center mt-4 md:hidden">
+              <div className="w-16 h-1 bg-slate-200 rounded-full"></div>
+            </div>
           </div>
         </div>
       </section>
