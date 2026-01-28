@@ -19,9 +19,47 @@ const Loader = () => (
 // Fallback pages
 const About = () => (
   <div className="pt-32 pb-24 px-4 max-w-7xl mx-auto">
-    <h1 className="text-5xl font-extrabold mb-8">About VSK Traders</h1>
-    <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+    <h1 className="text-5xl font-extrabold mb-4 text-center">About VSK Traders</h1>
+    <p className="text-center text-orange-600 font-bold text-xl mb-16">Part of VSK Group of Companies</p>
+
+    {/* Founder Section */}
+    <div className="bg-gradient-to-br from-slate-900 to-slate-800 rounded-[3rem] p-12 mb-16 shadow-2xl">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+        <div className="order-2 md:order-1 space-y-6">
+          <div className="inline-block bg-orange-600 text-white px-6 py-2 rounded-full text-sm font-bold uppercase tracking-wider mb-4">
+            Our Founder
+          </div>
+          <h2 className="text-4xl font-black text-white mb-6">Kaja Mohideen</h2>
+          <p className="text-slate-300 text-lg leading-relaxed">
+            Visionary entrepreneur and founder of <span className="text-orange-400 font-bold">VSK Group of Companies</span>,
+            Kaja Mohideen established VSK Traders in 1996 with a commitment to excellence in demolition services and
+            construction material supply.
+          </p>
+          <p className="text-slate-300 text-lg leading-relaxed">
+            With over three decades of industry experience, his leadership has transformed VSK Traders into one of
+            Chennai's most trusted names in building demolition and premium construction materials.
+          </p>
+          <div className="flex items-center space-x-4 pt-4">
+            <div className="h-1 w-20 bg-gradient-to-r from-orange-600 to-yellow-500 rounded-full"></div>
+            <span className="text-orange-400 font-bold text-sm uppercase tracking-wider">Since 1996</span>
+          </div>
+        </div>
+        <div className="order-1 md:order-2">
+          <div className="rounded-3xl overflow-hidden shadow-2xl border-4 border-orange-600/30">
+            <img
+              src="/founder.jpg"
+              alt="Kaja Mohideen - Founder of VSK Group of Companies"
+              className="w-full h-[500px] object-cover"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+
+    {/* Company Story */}
+    <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center mb-16">
       <div className="space-y-6 text-lg text-slate-600 leading-relaxed">
+        <h3 className="text-3xl font-bold text-slate-900 mb-6">Our Story</h3>
         <p>Founded on the principles of trust and safety, VSK Traders has grown from a local supplier to one of Chennai's premier names in demolition and construction materials.</p>
         <p>We believe that every structure has a story, and every new build deserves the best foundation. Our team of experts brings decades of combined experience to every demolition site, ensuring that projects are completed on time, within budget, and with zero accidents.</p>
         <p>Our material supply division ensures that contractors across Tamil Nadu have access to ISI-certified metal sheets, cement sheets, and high-strength pipes at wholesale prices.</p>

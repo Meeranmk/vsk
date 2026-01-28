@@ -58,7 +58,7 @@ const Hero = () => (
 
 const Features = () => {
   const features = [
-    { icon: <WrenchScrewdriverIcon className="h-8 w-8" />, title: '15+ Years Experience', desc: 'Expertise in complex industrial and residential projects.' },
+    { icon: <WrenchScrewdriverIcon className="h-8 w-8" />, title: '30+ Years Experience', desc: 'Expertise in complex industrial and residential projects.' },
     { icon: <CheckBadgeIcon className="h-8 w-8" />, title: 'ISI Certified Materials', desc: 'We only supply materials that meet high-quality standards.' },
     { icon: <TruckIcon className="h-8 w-8" />, title: 'Fast Delivery', desc: 'Strategic logistics to ensure your site never stops working.' },
     { icon: <CurrencyDollarIcon className="h-8 w-8" />, title: 'Competitive Pricing', desc: 'Direct supply chain ensuring the best market rates.' },
@@ -85,6 +85,55 @@ const Home: React.FC = () => {
   return (
     <div className="pt-0">
       <Hero />
+
+      {/* Statistics Section */}
+      <section className="py-20 bg-slate-900 relative overflow-hidden">
+        {/* Animated background stars */}
+        <div className="absolute inset-0 overflow-hidden">
+          <div className="absolute w-1 h-1 bg-white rounded-full top-[20%] left-[15%] animate-pulse"></div>
+          <div className="absolute w-1 h-1 bg-white rounded-full top-[60%] left-[85%] animate-pulse" style={{ animationDelay: '0.5s' }}></div>
+          <div className="absolute w-1 h-1 bg-white rounded-full top-[40%] right-[25%] animate-pulse" style={{ animationDelay: '1s' }}></div>
+          <div className="absolute w-1 h-1 bg-white rounded-full bottom-[30%] left-[40%] animate-pulse" style={{ animationDelay: '1.5s' }}></div>
+        </div>
+
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {/* Years of Experience */}
+            <div className="bg-slate-800/50 backdrop-blur-sm rounded-3xl p-10 border border-slate-700/50 hover:border-orange-500/50 transition-all duration-300 group text-center">
+              <div className="text-6xl md:text-7xl font-black mb-4">
+                <span className="bg-gradient-to-r from-yellow-400 via-orange-400 to-yellow-500 bg-clip-text text-transparent">
+                  30+
+                </span>
+              </div>
+              <h3 className="text-xl font-bold text-slate-300 mb-2">Years of Experience</h3>
+              <p className="text-sm text-orange-400 font-semibold">Since 1996</p>
+            </div>
+
+            {/* Projects Completed */}
+            <div className="bg-slate-800/50 backdrop-blur-sm rounded-3xl p-10 border border-slate-700/50 hover:border-orange-500/50 transition-all duration-300 group text-center">
+              <div className="text-6xl md:text-7xl font-black mb-4">
+                <span className="bg-gradient-to-r from-yellow-400 via-orange-400 to-yellow-500 bg-clip-text text-transparent">
+                  500+
+                </span>
+              </div>
+              <h3 className="text-xl font-bold text-slate-300 mb-2">Projects Completed</h3>
+              <p className="text-sm text-orange-400 font-semibold">Across Chennai</p>
+            </div>
+
+            {/* Quality Commitment */}
+            <div className="bg-slate-800/50 backdrop-blur-sm rounded-3xl p-10 border border-slate-700/50 hover:border-orange-500/50 transition-all duration-300 group text-center">
+              <div className="text-6xl md:text-7xl font-black mb-4">
+                <span className="bg-gradient-to-r from-yellow-400 via-orange-400 to-yellow-500 bg-clip-text text-transparent">
+                  100%
+                </span>
+              </div>
+              <h3 className="text-xl font-bold text-slate-300 mb-2">Quality Commitment</h3>
+              <p className="text-sm text-orange-400 font-semibold">Best in Class</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
       <Features />
 
       {/* Services Section */}

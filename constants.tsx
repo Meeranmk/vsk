@@ -163,7 +163,7 @@ export const TESTIMONIALS: Testimonial[] = [
   },
   {
     id: 't2',
-    name: 'Meera S.',
+    name: 'Suresh',
     role: 'Homeowner',
     content: 'Excellent quality metal sheets for our new roof. The pricing was competitive and delivery was right on time.',
     rating: 5
