@@ -15,7 +15,7 @@ const Products: React.FC = () => {
         <header className="mb-16 text-center">
           <h1 className="text-4xl md:text-6xl font-extrabold text-slate-900 mb-6">Product Catalog</h1>
           <p className="text-lg text-slate-600 max-w-2xl mx-auto">
-            High-quality construction materials and architectural salvage. We ensure every product meets ISI standards or has been safely recovered.
+            High-quality roofing materials and architectural salvage. We ensure every product meets ISI standards or has been safely recovered.
           </p>
         </header>
 
@@ -24,8 +24,8 @@ const Products: React.FC = () => {
           <button
             onClick={() => setSelectedCategory('All')}
             className={`px-6 py-3 rounded-full font-bold text-sm transition-all ${selectedCategory === 'All'
-                ? 'bg-blue-900 text-white shadow-lg'
-                : 'bg-white text-slate-600 hover:bg-gray-100'
+              ? 'bg-blue-900 text-white shadow-lg'
+              : 'bg-white text-slate-600 hover:bg-gray-100'
               }`}
           >
             All Products
@@ -35,8 +35,8 @@ const Products: React.FC = () => {
               key={cat}
               onClick={() => setSelectedCategory(cat)}
               className={`px-6 py-3 rounded-full font-bold text-sm transition-all ${selectedCategory === cat
-                  ? 'bg-blue-900 text-white shadow-lg'
-                  : 'bg-white text-slate-600 hover:bg-gray-100'
+                ? 'bg-blue-900 text-white shadow-lg'
+                : 'bg-white text-slate-600 hover:bg-gray-100'
                 }`}
             >
               {cat}

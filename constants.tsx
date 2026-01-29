@@ -11,27 +11,33 @@ export const COLORS = {
 export const SERVICES: Service[] = [
   {
     id: 'demolition',
-    title: 'Building Demolition',
-    description: 'Expert demolition services for residential, commercial, and industrial structures with a focus on safety and precision.',
+    title: 'Building Demolition Services Chennai',
+    description: 'Expert building demolition services in Chennai for residential, commercial, and industrial structures. VSK Traders provides safe, professional demolition services across Chennai and Tamil Nadu with a focus on safety, precision, and environmental compliance. Serving Perambur, Guindy, Ambattur, and all Chennai areas since 1996.',
     features: [
-      'Residential & Commercial Demolition',
-      'Site Clearing & Excavation',
-      'Structural Salvaging',
-      'Safe Debris Management',
-      'High-Rise Demolition Experts'
+      'Residential & Commercial Building Demolition Chennai',
+      'Industrial Complex Demolition & Dismantling',
+      'High-Rise Building Demolition Services',
+      'Site Clearing & Excavation Chennai',
+      'Structural Salvaging & Material Recovery',
+      'Safe Debris Management & Disposal',
+      'Warehouse & Factory Demolition',
+      'Concrete Breaking & Foundation Removal'
     ],
     imageUrl: '/demolition-service.png'
   },
   {
     id: 'roofing',
-    title: 'Roofing Services',
-    description: 'Comprehensive roofing solutions including installation, repair, and maintenance using high-quality materials.',
+    title: 'Roofing Services & Shed Construction Chennai',
+    description: 'Comprehensive roofing services in Chennai including installation, repair, and maintenance using premium roofing materials. VSK Traders specializes in industrial shed construction, warehouse roofing, metal roofing installation, and commercial roofing solutions across Chennai and Tamil Nadu.',
     features: [
-      'New Roof Installation',
-      'Leak Repairs & Waterproofing',
-      'Industrial Roofing Solutions',
-      'Commercial Shed Construction',
-      'Routine Maintenance Packages'
+      'Industrial Shed Construction Chennai',
+      'Metal Roofing Sheet Installation',
+      'UPVC & PUF Roofing Solutions',
+      'Warehouse & Factory Roofing',
+      'Leak Repairs & Waterproofing Services',
+      'Commercial Shed Fabrication & Erection',
+      'Pre-Engineered Building (PEB) Structures',
+      'Roofing Maintenance & Repair Chennai'
     ],
     imageUrl: '/shed-work.png'
   }
@@ -56,30 +62,40 @@ export const PRODUCT_CATEGORIES = [
 export const PRODUCTS: Product[] = [
   {
     id: '1',
-    name: 'Industrial Metal Sheets (Blue)',
+    name: 'Industrial Metal Roofing Sheets Chennai (Blue)',
     category: 'Metal Sheets',
-    description: 'Profiled blue metal sheets for industrial sheds and modern roofing applications.',
-    specs: ['Color: Royal Blue', 'Profile: Trapezoidal', 'Durability: 20+ years'],
+    description: 'Premium profiled blue metal roofing sheets for industrial sheds, warehouses, and modern roofing applications in Chennai. Durable, weather-resistant metal sheets suitable for Chennai climate.',
+    specs: ['Color: Royal Blue', 'Profile: Trapezoidal', 'Durability: 20+ years', 'Chennai Weather Resistant'],
     imageUrl: '/metal-sh.jpg',
     availabilityDate: 'In Stock',
     isNew: true
   },
   {
     id: '1a',
-    name: 'Alloy Metal Sheets',
+    name: 'GC Sheets Chennai (Galvanized Corrugated)',
     category: 'Metal Sheets',
-    description: 'Premium alloy metal sheets with superior strength and corrosion resistance.',
-    specs: ['Material: Aluminum Alloy', 'Finish: Polished', 'Thickness: 0.5mm - 3mm'],
+    description: 'Premium GC (Galvanized Corrugated) roofing sheets with superior corrosion resistance and durability. Ideal for industrial sheds, warehouses, and commercial roofing in Chennai. Zinc-coated for long-lasting protection against coastal climate.',
+    specs: ['Material: Galvanized Steel', 'Profile: Corrugated', 'Thickness: 0.3mm - 0.8mm', 'Zinc Coating: 120-275 GSM'],
     imageUrl: '/alloy-sh.jpg',
     availabilityDate: 'In Stock',
     isNew: false
   },
   {
+    id: '1b',
+    name: 'Curved Corrugated Metal Roofing Sheets Chennai (Blue)',
+    category: 'Metal Sheets',
+    description: 'Custom curved corrugated blue metal roofing sheets for curved roof applications, arched structures, and architectural designs in Chennai. Pre-bent corrugated sheets for curved roofing, canopies, and decorative applications. Vibrant blue metallic finish with corrugated profile.',
+    specs: ['Color: Royal Blue', 'Material: Galvanized Steel', 'Profile: Corrugated', 'Custom Curve Radius'],
+    imageUrl: '/curved-corrugated-blue.png',
+    availabilityDate: 'In Stock',
+    isNew: true
+  },
+  {
     id: '2',
-    name: 'Corrugated Cement Sheets',
+    name: 'Corrugated Cement Roofing Sheets Chennai',
     category: 'Cement Sheets',
-    description: 'Heavy-duty grey corrugated asbestos-free cement sheets for large-scale warehouses.',
-    specs: ['Texture: Corrugated', 'Weight: Standard Industrial', 'Weatherproof'],
+    description: 'Heavy-duty grey corrugated asbestos-free cement roofing sheets for large-scale warehouses, industrial buildings, and factory roofing in Chennai. Weatherproof and durable.',
+    specs: ['Texture: Corrugated', 'Weight: Standard Industrial', 'Weatherproof', 'Asbestos-Free'],
     imageUrl: '/cement.png',
     availabilityDate: 'In Stock'
   },
@@ -133,10 +149,10 @@ export const PRODUCTS: Product[] = [
   },
   {
     id: '9',
-    name: 'UPVC Roofing Sheets',
+    name: 'UPVC Roofing Sheets Chennai',
     category: 'UPVC Roofing Sheets',
-    description: 'Multi-layer UPVC roofing sheets that offer excellent heat insulation, soundproofing, and chemical resistance.',
-    specs: ['Material: UPVC', 'Layers: 3-Layer Tech', 'Colors: White/Blue/Terracotta'],
+    description: 'Multi-layer UPVC roofing sheets Chennai that offer excellent heat insulation, soundproofing, and chemical resistance. Perfect for Chennai climate with superior UV protection and thermal insulation for industrial and residential roofing.',
+    specs: ['Material: UPVC', 'Layers: 3-Layer Tech', 'Colors: White/Blue/Terracotta', 'Heat Insulation'],
     imageUrl: '/upvc-roofing.png',
     availabilityDate: 'In Stock',
     isNew: true
@@ -181,16 +197,7 @@ export const PRODUCTS: Product[] = [
     availabilityDate: 'In Stock',
     isNew: true
   },
-  {
-    id: '6',
-    name: 'Ornate Iron Gates (Salvage)',
-    category: 'Iron Gates',
-    description: 'Beautifully crafted second-hand ornate iron gates. Perfect for heritage looks or high-security residential entry.',
-    specs: ['Material: Cast Iron', 'Style: Ornate/Vintage', 'Condition: Refurbished available'],
-    imageUrl: '/iron-gate-1.jpg',
-    availabilityDate: 'In Stock',
-    isNew: true
-  },
+
   {
     id: '7',
     name: 'Designer Iron Gates (Premium)',
