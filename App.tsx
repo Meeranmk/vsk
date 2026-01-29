@@ -20,7 +20,7 @@ const Loader = () => (
 const About = () => (
   <div className="pt-32 pb-24 px-4 max-w-7xl mx-auto">
     <h1 className="text-5xl font-extrabold mb-4 text-center">About VSK Traders</h1>
-    <p className="text-center text-orange-600 font-bold text-xl mb-16">Part of VSK Group of Companies</p>
+    <p className="text-center text-orange-600 font-bold text-xl mb-16">Part of Hameed&Co Group of Companies</p>
 
     {/* Founder Section */}
     <div className="bg-gradient-to-br from-slate-900 to-slate-800 rounded-[3rem] p-12 mb-16 shadow-2xl">

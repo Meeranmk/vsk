@@ -250,7 +250,7 @@ const Home: React.FC = () => {
                   <h3 className="text-xl font-bold text-slate-900 mb-2">{p.name}</h3>
                   <p className="text-sm text-slate-500 mb-6 line-clamp-2">{p.description}</p>
                   <Link to="/products" className="block text-center border-2 border-slate-200 py-3 rounded-xl font-bold text-slate-700 hover:border-blue-900 hover:text-blue-900 transition-all">
-                    Request Specs
+                    Learn More
                   </Link>
                 </div>
               ))}
