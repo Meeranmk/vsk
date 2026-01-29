@@ -269,30 +269,71 @@ const Home: React.FC = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-5xl font-bold text-slate-900 mb-4">Client Success Stories</h2>
-            <p className="text-slate-500">Trusted by top developers and homeowners in Chennai.</p>
+            <p className="text-slate-500">Trusted by top developers and homeowners across Chennai.</p>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {TESTIMONIALS.map((t) => (
-              <div key={t.id} className="bg-white p-10 rounded-3xl shadow-sm border border-slate-100 flex flex-col justify-between">
-                <div>
-                  <div className="flex space-x-1 mb-6">
-                    {[...Array(t.rating)].map((_, i) => (
-                      <span key={i} className="text-yellow-400 text-xl">★</span>
-                    ))}
-                  </div>
-                  <p className="text-lg text-slate-700 italic mb-8 leading-relaxed">"{t.content}"</p>
-                </div>
-                <div className="flex items-center">
-                  <div className="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center text-blue-900 font-bold mr-4">
-                    {t.name.charAt(0)}
-                  </div>
+
+          <div className="relative group">
+            {/* Scroll Buttons */}
+            <button
+              onClick={() => {
+                const container = document.getElementById('testimonials-scroll');
+                if (container) {
+                  container.scrollBy({ left: -400, behavior: 'smooth' });
+                }
+              }}
+              className="absolute left-0 top-1/2 -translate-y-1/2 -ml-4 z-10 bg-white p-3 rounded-full shadow-lg text-blue-900 opacity-0 group-hover:opacity-100 transition-all duration-300 hover:scale-110 hidden md:block"
+            >
+              <ChevronLeftIcon className="h-6 w-6" />
+            </button>
+            <button
+              onClick={() => {
+                const container = document.getElementById('testimonials-scroll');
+                if (container) {
+                  container.scrollBy({ left: 400, behavior: 'smooth' });
+                }
+              }}
+              className="absolute right-0 top-1/2 -translate-y-1/2 -mr-4 z-10 bg-white p-3 rounded-full shadow-lg text-blue-900 opacity-0 group-hover:opacity-100 transition-all duration-300 hover:scale-110 hidden md:block"
+            >
+              <ChevronRightIcon className="h-6 w-6" />
+            </button>
+
+            {/* Carousel Container */}
+            <div
+              id="testimonials-scroll"
+              className="flex overflow-x-auto gap-8 pb-8 snap-x snap-mandatory hide-scrollbar"
+              style={{ msOverflowStyle: 'none', scrollbarWidth: 'none' }}
+            >
+              {TESTIMONIALS.map((t) => (
+                <div key={t.id} className="min-w-[300px] md:min-w-[450px] snap-center bg-white p-10 rounded-3xl shadow-sm border border-slate-100 hover:shadow-xl transition-all duration-300 flex flex-col justify-between">
                   <div>
-                    <h4 className="font-bold text-slate-900">{t.name}</h4>
-                    <p className="text-xs text-slate-400 font-medium uppercase tracking-wider">{t.role}</p>
+                    <div className="flex space-x-1 mb-6">
+                      {[...Array(t.rating)].map((_, i) => (
+                        <span key={i} className="text-yellow-400 text-2xl">★</span>
+                      ))}
+                    </div>
+                    <p className="text-lg text-slate-700 italic mb-8 leading-relaxed">"{t.content}"</p>
+                  </div>
+                  <div className="flex items-center">
+                    <div className="w-14 h-14 bg-gradient-to-br from-blue-500 to-blue-700 rounded-full flex items-center justify-center text-white font-bold text-xl mr-4 shadow-md">
+                      {t.name.charAt(0)}
+                    </div>
+                    <div>
+                      <h4 className="font-bold text-slate-900 text-lg">{t.name}</h4>
+                      <p className="text-sm text-slate-500 font-medium">{t.role}</p>
+                    </div>
                   </div>
                 </div>
+              ))}
+            </div>
+
+            {/* Mobile Swipe Hint */}
+            <div className="flex justify-center mt-4 md:hidden">
+              <div className="flex space-x-2">
+                {TESTIMONIALS.slice(0, 5).map((_, i) => (
+                  <div key={i} className="w-2 h-2 bg-slate-300 rounded-full"></div>
+                ))}
               </div>
-            ))}
+            </div>
           </div>
         </div>
       </section>

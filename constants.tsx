@@ -241,15 +241,71 @@ export const TESTIMONIALS: Testimonial[] = [
   {
     id: 't1',
     name: 'Arun Kumar',
-    role: 'Property Developer',
-    content: 'VSK Traders handled the demolition of our old commercial building with extreme professionalism. Safety was their priority.',
+    role: 'Property Developer, Guindy',
+    content: 'VSK Traders handled the demolition of our old commercial building with extreme professionalism. Safety was their priority and they completed the project 2 days ahead of schedule.',
     rating: 5
   },
   {
     id: 't2',
-    name: 'Suresh',
-    role: 'Homeowner',
-    content: 'Excellent quality metal sheets for our new roof. The pricing was competitive and delivery was right on time.',
+    name: 'Suresh Ramachandran',
+    role: 'Homeowner, Perambur',
+    content: 'Excellent quality metal sheets for our new roof. The pricing was competitive and delivery was right on time. Very satisfied with their service.',
+    rating: 5
+  },
+  {
+    id: 't3',
+    name: 'Rajesh Industries',
+    role: 'Factory Owner, Ambattur',
+    content: 'We needed our old factory shed dismantled and VSK Traders did an amazing job. They even bought the scrap materials at a fair price, making it cost-neutral for us!',
+    rating: 5
+  },
+  {
+    id: 't4',
+    name: 'Priya Venkatesh',
+    role: 'Architect, Anna Nagar',
+    content: 'I have recommended VSK Traders to multiple clients for roofing materials. Their UPVC sheets are top quality and they have great technical knowledge to guide you.',
+    rating: 5
+  },
+  {
+    id: 't5',
+    name: 'Mohammed Farook',
+    role: 'Warehouse Owner, Porur',
+    content: 'VSK Traders constructed our 15,000 sq.ft warehouse shed in just 6 weeks. The PEB structure is excellent quality and their team was very professional throughout.',
+    rating: 5
+  },
+  {
+    id: 't6',
+    name: 'Lakshmi Constructions',
+    role: 'Builder, Velachery',
+    content: 'We have been sourcing roofing materials from VSK Traders for 5+ years. Consistent quality, competitive prices, and reliable delivery. Highly recommended!',
+    rating: 5
+  },
+  {
+    id: 't7',
+    name: 'Karthik Subramanian',
+    role: 'Hotel Owner, T. Nagar',
+    content: 'They demolished our old 4-storey hotel building safely in a congested area. Zero complaints from neighbors and the site was left clean. Excellent controlled demolition work!',
+    rating: 5
+  },
+  {
+    id: 't8',
+    name: 'Senthil Kumar',
+    role: 'Industrial Shed Contractor, Tambaram',
+    content: 'VSK Traders is my go-to supplier for all metal roofing sheets and structural materials. Their GC sheets and MS pipes are always ISI certified. Great partnership!',
+    rating: 5
+  },
+  {
+    id: 't9',
+    name: 'Deepa Logistics',
+    role: 'Logistics Company, Sholinganallur',
+    content: 'They built our cold storage shed with PUF insulated panels. Temperature control is perfect and the construction quality is outstanding. Worth every rupee!',
+    rating: 5
+  },
+  {
+    id: 't10',
+    name: 'Vijay Enterprises',
+    role: 'Manufacturing Unit, Chromepet',
+    content: 'VSK Traders demolished our old manufacturing unit and built a new modern shed. One-stop solution for everything. Saved us time and hassle!',
     rating: 5
   }
 ];
