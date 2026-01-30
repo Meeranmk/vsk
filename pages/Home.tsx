@@ -22,7 +22,7 @@ const Hero = () => (
         muted
         playsInline
         preload="metadata"
-        className="w-full h-full object-contain md:object-cover object-center"
+        className="w-full h-full object-cover"
       />
       <div className="absolute inset-0 bg-gradient-to-r from-blue-900/90 to-black/60"></div>
     </div>
