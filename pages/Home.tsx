@@ -15,7 +15,7 @@ const Hero = () => (
   <section className="relative h-screen flex items-center overflow-hidden">
     <div className="absolute inset-0 z-0">
       <video
-        src="/buildingdemo.mp4"
+        src="/demovideo.mp4"
         autoPlay
         loop
         muted
