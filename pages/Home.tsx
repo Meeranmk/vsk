@@ -12,15 +12,17 @@ import {
 import { SERVICES, PRODUCTS, TESTIMONIALS } from '../constants';
 
 const Hero = () => (
-  <section className="relative h-screen flex items-center overflow-hidden">
+  <section className="relative h-screen min-h-screen flex items-center overflow-hidden">
     <div className="absolute inset-0 z-0">
       <video
         src="/demovideo.mp4"
+        poster="/demolition-poster.jpg"
         autoPlay
         loop
         muted
         playsInline
-        className="w-full h-full object-cover"
+        preload="metadata"
+        className="w-full h-full object-contain md:object-cover object-center"
       />
       <div className="absolute inset-0 bg-gradient-to-r from-blue-900/90 to-black/60"></div>
     </div>
