@@ -14,6 +14,13 @@ import { SERVICES, PRODUCTS, TESTIMONIALS } from '../constants';
 const Hero = () => (
   <section className="relative h-screen min-h-screen flex items-center overflow-hidden">
     <div className="absolute inset-0 z-0">
+      {/* Background Image for Mobile */}
+      <div
+        className="md:hidden absolute inset-0 bg-cover bg-center"
+        style={{ backgroundImage: 'url(/mobile-hero-bg.jpg)' }}
+      ></div>
+
+      {/* Video for Desktop/Tablet */}
       <video
         src="/demovideo.mp4"
         poster="/demolition-poster.jpg"
@@ -22,7 +29,7 @@ const Hero = () => (
         muted
         playsInline
         preload="metadata"
-        className="w-full h-full object-cover"
+        className="hidden md:block w-full h-full object-cover"
       />
       <div className="absolute inset-0 bg-gradient-to-r from-blue-900/90 to-black/60"></div>
     </div>
