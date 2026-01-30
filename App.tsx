@@ -188,6 +188,43 @@ const Gallery = () => (
       <h1 className="text-5xl font-extrabold mb-4">Building Demolition Projects</h1>
       <p className="text-slate-500 text-lg">Real-world snapshots of our site operations and structural clearing across Chennai.</p>
     </div>
+
+    {/* Demolition Videos Section */}
+    <div className="mb-16">
+      <h2 className="text-3xl font-bold text-slate-900 mb-8 text-center">Demolition Work in Action</h2>
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+        {/* Video 1 */}
+        <div className="group relative rounded-3xl overflow-hidden shadow-2xl border border-slate-200 bg-slate-900">
+          <video
+            src="/demovideo2.mp4"
+            controls
+            className="w-full h-[400px] object-cover"
+            poster="/demolition-poster.jpg"
+          />
+          <div className="absolute top-4 left-4 bg-orange-600 text-white text-xs font-bold px-4 py-2 rounded-full uppercase tracking-wider">
+            Professional Demolition
+          </div>
+        </div>
+
+        {/* Video 2 */}
+        <div className="group relative rounded-3xl overflow-hidden shadow-2xl border border-slate-200 bg-slate-900">
+          <video
+            src="/demovideo3.mp4"
+            controls
+            className="w-full h-[400px] object-cover"
+            poster="/demolition-poster.jpg"
+          />
+          <div className="absolute top-4 left-4 bg-blue-900 text-white text-xs font-bold px-4 py-2 rounded-full uppercase tracking-wider">
+            Demolition Services
+          </div>
+        </div>
+      </div>
+    </div>
+
+    {/* Project Images Section */}
+    <div className="mb-8">
+      <h2 className="text-3xl font-bold text-slate-900 mb-8 text-center">Completed Projects</h2>
+    </div>
     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
       {PROJECTS.map(project => (
         <div key={project.id} className="group relative rounded-3xl overflow-hidden shadow-lg border border-slate-100 bg-white">
